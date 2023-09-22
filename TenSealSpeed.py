@@ -1,3 +1,5 @@
+# 這個程式用來測試 TenSEAL 中 BFV 與 CKKS 加解密速度(無運算)，並與AES256做比較。
+
 import tenseal as ts
 import time
 from Cryptodome.Cipher import AES

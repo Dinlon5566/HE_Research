@@ -3,12 +3,10 @@ import tenseal as ts
 import matplotlib.pyplot as plt
 import numpy as np
 
-# 初始化CKKS上下文
 CKKSContext = ts.context(ts.SCHEME_TYPE.CKKS, poly_modulus_degree=8192, coeff_mod_bit_sizes=[60, 40, 40, 60])
 CKKSContext.generate_galois_keys()
 CKKSContext.global_scale = 2**40
 
-# 創建加密向量
 b = [0.123] 
 
 times_list = []
@@ -33,7 +31,6 @@ for exponent in range(14):
     elapsed_times.append(elapsed_time)
     average_times.append(elapsed_time / times)
 
-# 打印和繪製結果
 for i, txt in enumerate(elapsed_times):
     print(f"{times_list[i]} times: {txt:.6f} seconds")
     plt.annotate(f'{txt:.2f}', (times_list[i], elapsed_times[i]))

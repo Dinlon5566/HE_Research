@@ -9,7 +9,7 @@ CKKSContext.generate_galois_keys()
 CKKSContext.global_scale = 2**40
 
 # 創建加密向量
-b = [0.123]  # 初始明文數據，CKKS支持浮點數
+b = [0.123]  # 初始畫
 Ta_encrypted = ts.ckks_vector(CKKSContext, b)
 
 times_list = []
@@ -33,7 +33,6 @@ for exponent in range(14):
     elapsed_times.append(elapsed_time)
     average_times.append(elapsed_time / times)
 
-# 打印和繪製結果
 for i, txt in enumerate(elapsed_times):
     print(f"{times_list[i]} times: {txt:.6f} seconds")
     plt.annotate(f'{txt:.2f}', (times_list[i], elapsed_times[i]))

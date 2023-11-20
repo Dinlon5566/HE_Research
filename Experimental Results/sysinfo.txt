@@ -1,0 +1,15 @@
+CPU 資訊
+架構：x86_64
+CPU(s)：32
+模型名稱：13th Gen Intel(R) Core(TM) i9-13900K
+每核線程數：2
+每插槽核心數：24
+CPU 最大 MHz：5800.0000
+CPU 最小 MHz：800.0000
+記憶體資訊
+總計：62Gi
+可用：55Gi
+Python 版本
+Python 3.10.6
+同態加密函式庫（TenSEAL）
+版本：0.3.14
